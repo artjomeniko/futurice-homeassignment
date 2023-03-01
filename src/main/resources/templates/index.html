@@ -2,17 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Github Repositories</title>
-    <script type="text/javascript" th:src="@{js/main.js}"></script>
-    <link rel="stylesheet" type="text/css" th:href="@{css/main.css}"></link>
+    <title>Github Repos</title>
 </head>
 <body>
-<h1>Github Repositories of <span th:text="${login}"></span></h1>
-<ul>
-    <li th:each="repository : ${repositories}">
-        <a th:href="@{'/repos/' + ${repository.owner.login} + '/' + ${repository.name}}"><span th:text="${repository.name}"></span></a>
-    </li>
-</ul>
-<button onclick="main()">Don't you dare to click me?</button>
+<form method="get" action="/repos">
+    <label for="owner">Enter Github Login:</label>
+    <input type="text" id="owner" name="owner">
+    <button type="submit">Get Repos</button>
+</form>
 </body>
 </html>

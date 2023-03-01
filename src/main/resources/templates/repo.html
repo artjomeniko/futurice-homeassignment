@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>The Github Repo</title>
+</head>
+<body>
+    <h1>Repo: <span th:text="${repo.name} + ' ' + by + ' ' + ${owner}"></span></h1>
+    <p>Description: <span th:text="${repo.getDescription()}"></span></p>
+</body>
+</html>

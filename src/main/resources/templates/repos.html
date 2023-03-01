@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>The Owner's Github Repo List</title>
+</head>
+<body>
+    <h1>Repositories of <span th:text="${owner}"></span>:</h1>
+    <ul th:if="${#lists.isEmpty(repos)}"><span th:text="${owner}"></span> has no repositories. Please, check some other time.</ul>
+    <ul th:unless="${#lists.isEmpty(repos)}">
+        <li th:each="repo : ${repos}">
+            <a th:href="@{/repo(owner=${owner}, repo=${repo.name})}" th:text="${repo.getName()}"></a>
+        </li>
+    </ul>
+</body>
+</html>
