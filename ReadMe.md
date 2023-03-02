@@ -1,20 +1,21 @@
-# Getting Started
+# Github Api User Repos App
 
-### Reference Documentation
-For further reference, please consider the following sections:
+## Project description:
+This app takes a Github login name and receives the corresponding Gi repositories with the data of the chosen repositories.
+## Stack
+* Java 19
+* Spring Boot 3.0.3
+* Maven
+* Jar packaging
+* Thymeleaf (as Frontend)
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.0.3/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.0.3/maven-plugin/reference/html/#build-image)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#using.devtools)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#web)
-* [Thymeleaf](https://docs.spring.io/spring-boot/docs/3.0.3/reference/htmlsingle/#web.servlet.spring-mvc.template-engines)
-
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
-
+## How to run:
+* Download and install Java 19 on your computer
+* Clone the project repo from git to your computer
+* Open the project with an IDE, preferably with IntelliJ
+* In IntelliJ select File > Project Structure choose SDK > Oracle OpenJDK version 19.0.1
+* Navigate to the class ProcessGitHubApiDataApplication and run the service.
+* Go to a browser and use link: http://localhost:8080/
+* Enter someone's Github owner's login name. 
+* Click on one of the shown repos. You will receive some data about this repo.
+* If there are no repos, the corresponding text will be shown.
